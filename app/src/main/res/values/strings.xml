@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">LazyViewPagerIndicator</string>
+
+    <string name="str_home_event">第一页</string>
+    <string name="str_home_daily">第二页</string>
+    <string name="str_home_message">第三页</string>
+    <string name="str_home_collection">第四页</string>
 </resources>
