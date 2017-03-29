@@ -1,9 +1,11 @@
 # LazyViewPagerIndicator
 
 ViewPager+底部导航栏（懒加载）
-添加在你的根build.gradle在库底：
+![](https://github.com/Lovingd/LazyViewPagerIndicator/blob/master/lazyViewpager.gif)
 
-allprojects {
+# 使用方式 #
+	添加在你的根build.gradle在库底：	
+        allprojects {
 		repositories {
 			...
 			maven { url 'https://jitpack.io' }
@@ -11,12 +13,13 @@ allprojects {
 	}
   
   
-  添加依赖关系
+     添加依赖关系
   
-  dependencies {
+     dependencies {
 	        compile 'com.github.Lovingd:LazyViewPagerIndicator:1.0.1'
 	}
   
   
+
   
   [![](https://jitpack.io/v/Lovingd/LazyViewPagerIndicator.svg)](https://jitpack.io/#Lovingd/LazyViewPagerIndicator)
