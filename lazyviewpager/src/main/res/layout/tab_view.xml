@@ -16,6 +16,7 @@
         <!--android:layout_height="1dp"-->
         <!--android:background="#D3D3D3" />-->
     <View
+        android:id="@+id/view_choose"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="@drawable/tab_indicator_selector" />

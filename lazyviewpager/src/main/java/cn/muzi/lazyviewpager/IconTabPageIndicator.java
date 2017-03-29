@@ -251,7 +251,8 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
         private ImageView mImageView;
         private TextView mTextView;
         private View tab_gap;
-        
+        private View view_choose;
+
 
         public TabView(Context context) {
             super(context, null);
@@ -259,7 +260,8 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
             mImageView = (ImageView) view.findViewById(R.id.tab_image);
             mTextView = (TextView) view.findViewById(R.id.tab_text);
             tab_gap =  view.findViewById(R.id.tab_gap);
-            
+            view_choose =  view.findViewById(R.id.view_choose);
+
             this.setGravity(Gravity.CENTER);
             this.addView(view, new ViewGroup.LayoutParams(MATCH_PARENT, MATCH_PARENT));
         }
@@ -276,8 +278,22 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
               
         }
 
+        /**
+         * 设置字体内容
+         * @param text
+         */
         public void setText(CharSequence text) {
             mTextView.setText(text);
+        }
+
+        /**
+         * 设置字体的颜色
+         * @param colorId
+         */
+        public void  setTextColor(int colorId){
+            if(colorId>0){
+                mTextView.setTextColor(colorId);
+            }
         }
 
         public void setIcon(int resId) {
@@ -301,6 +317,25 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
         		tab_gap.setVisibility(View.INVISIBLE);
         	}
         	
+        }
+
+        /**
+         * 设置间隙的颜色
+         * @param colorId
+         */
+        public void setTabgapColor(int colorId){
+            if(colorId>0) {
+                tab_gap.setBackgroundResource(colorId);
+            }
+        }
+        /**
+         * 设置标示的颜色
+         * @param colorId
+         */
+        public void setViewChooseColor(int colorId){
+            if(colorId>0) {
+                view_choose.setBackgroundResource(colorId);
+            }
         }
     }
 }
