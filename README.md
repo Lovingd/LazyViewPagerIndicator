@@ -20,7 +20,7 @@ ViewPager+底部导航栏（懒加载）
      添加依赖关系
   
      dependencies {
-	        compile 'com.github.Lovingd:LazyViewPagerIndicator:1.0.1'
+	        compile 'com.github.Lovingd:LazyViewPagerIndicator:1.0.2'
 	}
   
   
