@@ -23,7 +23,6 @@ ViewPager+底部导航栏（懒加载）
 	        compile 'com.github.Lovingd:LazyViewPagerIndicator:1.0.2'
 	}
   
-  
-
-  
+  这个是基于大神的控件修改并适应自己的用法  
+  
   [![](https://jitpack.io/v/Lovingd/LazyViewPagerIndicator.svg)](https://jitpack.io/#Lovingd/LazyViewPagerIndicator)
