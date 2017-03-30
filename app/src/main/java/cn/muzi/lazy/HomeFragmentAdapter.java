@@ -56,7 +56,7 @@ public class HomeFragmentAdapter extends FragmentPagerAdapter implements IconPag
 
     @Override
     public boolean isShowChoose() {
-        return false;
+        return true;
     }
 
     @Override
