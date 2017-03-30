@@ -23,8 +23,8 @@ ViewPager+底部导航栏（懒加载）
 	        compile 'com.github.Lovingd:LazyViewPagerIndicator:1.0.4'
 	}
 
-# 住方法里面的调用方式 #
-        public class HomeFragmentAdapter extends FragmentPagerAdapter implements IconPagerAdapter {
+# 主方法里面的调用方式 #
+          public class HomeFragmentAdapter extends FragmentPagerAdapter implements IconPagerAdapter {
                  private List<BaseFragment> mFragments;
 
                  public HomeFragmentAdapter(List<BaseFragment> fragments, FragmentManager fm) {
