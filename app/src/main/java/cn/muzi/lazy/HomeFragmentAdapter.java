@@ -34,26 +34,50 @@ public class HomeFragmentAdapter extends FragmentPagerAdapter implements IconPag
         return mFragments.get(i);
     }
 
+    /**
+     * 设置底部图标的变化
+     * @param index
+     * @return
+     */
     @Override
     public int getIconResId(int index) {
         return mFragments.get(index).getIconId();
     }
 
+    /**
+     * 设置底部文字的颜色
+     * @param index
+     * @return
+     */
     @Override
     public int getTextColorId(int index) {
         return mFragments.get(index).getTextId();
     }
 
+    /**
+     * 设置间隙的颜色值
+     * @param index
+     * @return
+     */
     @Override
     public int getTabGapId(int index) {
         return mFragments.get(index).getTabgapId();
     }
 
+    /**
+     * 设置底部选择的线的颜色
+     * @param index
+     * @return
+     */
     @Override
     public int getViewChooseId(int index) {
         return mFragments.get(index).getViewchooseId();
     }
 
+    /**
+     * 设置底部选择的线   是否显示
+     * @return
+     */
     @Override
     public boolean isShowChoose() {
         return true;
