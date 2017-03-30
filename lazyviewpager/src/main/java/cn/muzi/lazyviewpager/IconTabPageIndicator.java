@@ -133,14 +133,23 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
         }
     }
 
-    private void addTab(int index, CharSequence text, int iconResId) {
+    private void addTab(int index, CharSequence text, int... ResId) {
         final TabView tabView = new TabView(getContext());
         tabView.mIndex = index;
         tabView.setOnClickListener(mTabClickListener);
         tabView.setText(text);
 
-        if (iconResId > 0) {
-            tabView.setIcon(iconResId);
+        if (ResId[0] > 0) {
+            tabView.setIcon(ResId[0]);
+        }
+        if (ResId[1] > 0) {
+            tabView.setIcon(ResId[1]);
+        }
+        if (ResId[2] > 0) {
+            tabView.setIcon(ResId[2]);
+        }
+        if (ResId[3] > 0) {
+            tabView.setIcon(ResId[3]);
         }
         
         if(index == 0)
@@ -203,9 +212,12 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
             if (title == null) {
                 title = EMPTY_TITLE;
             }
-            int iconResId = 0;
+            int[] iconResId = new int[]{0,0,0,0};
             if (iconAdapter != null) {
-                iconResId = iconAdapter.getIconResId(i);
+                iconResId[0] = iconAdapter.getIconResId(i);
+                iconResId[1] = iconAdapter.getTextColorId(i);
+                iconResId[2] = iconAdapter.getTabGapId(i);
+                iconResId[3] = iconAdapter.getViewChooseId(i);
             }
             addTab(i, title, iconResId);
         }

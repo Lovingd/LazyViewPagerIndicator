@@ -40,6 +40,21 @@ public class HomeFragmentAdapter extends FragmentPagerAdapter implements IconPag
     }
 
     @Override
+    public int getTextColorId(int index) {
+        return mFragments.get(index).getTextId();
+    }
+
+    @Override
+    public int getTabGapId(int index) {
+        return mFragments.get(index).getTabgapId();
+    }
+
+    @Override
+    public int getViewChooseId(int index) {
+        return mFragments.get(index).getViewchooseId();
+    }
+
+    @Override
     public int getCount() {
         return mFragments.size();
     }

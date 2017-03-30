@@ -5,7 +5,7 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="cn.muzi.lazy.MainActivity">
 
 
@@ -13,6 +13,7 @@
         android:id="@+id/indicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:viewchoose="@drawable/tab_indicator_selectorq_mian"
         android:layout_alignParentBottom="true"/>
 
     <cn.muzi.lazyviewpager.LazyViewPager

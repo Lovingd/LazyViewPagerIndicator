@@ -27,7 +27,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.2.0'
     testCompile 'junit:junit:4.12'
     compile project(':lazyviewpager')
-
+//    compile 'com.github.Lovingd:LazyViewPagerIndicator:1.0.2'
     /*控件注解*/
     compile 'com.jakewharton:butterknife:8.4.0'
     apt 'com.jakewharton:butterknife-compiler:8.4.0'

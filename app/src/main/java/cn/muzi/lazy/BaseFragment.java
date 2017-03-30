@@ -24,6 +24,33 @@ public abstract class BaseFragment extends Fragment {
      */
     private String title;
     private int iconId;
+    private int textId;
+    private int tabgapId;
+    private int viewchooseId;
+
+    public int getTextId() {
+        return textId;
+    }
+
+    public void setTextId(int textId) {
+        this.textId = textId;
+    }
+
+    public int getTabgapId() {
+        return tabgapId;
+    }
+
+    public void setTabgapId(int tabgapId) {
+        this.tabgapId = tabgapId;
+    }
+
+    public int getViewchooseId() {
+        return viewchooseId;
+    }
+
+    public void setViewchooseId(int viewchooseId) {
+        this.viewchooseId = viewchooseId;
+    }
 
     public String getTitle() {
         return title;
