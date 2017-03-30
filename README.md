@@ -20,7 +20,7 @@ ViewPager+底部导航栏（懒加载）
      添加依赖关系
 
     dependencies {
-	        compile 'com.github.Lovingd:LazyViewPagerIndicator:1.0.3'
+	        compile 'com.github.Lovingd:LazyViewPagerIndicator:1.0.4'
 	}
 
 #住方法里面的调用方式#
@@ -129,6 +129,8 @@ ViewPager+底部导航栏（懒加载）
           public void setIconId(int iconId) {
               this.iconId = iconId;
           }
+
+#具体的调用方式请下载demo#
 
   这个是基于大神的控件修改并适应自己的用法
 
