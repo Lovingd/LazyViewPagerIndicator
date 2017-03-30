@@ -133,7 +133,7 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
         }
     }
 
-    private void addTab(int index, CharSequence text, int... ResId) {
+    private void addTab(int index, CharSequence text,boolean isShow, int... ResId) {
         final TabView tabView = new TabView(getContext());
         tabView.mIndex = index;
         tabView.setOnClickListener(mTabClickListener);
@@ -143,18 +143,20 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
             tabView.setIcon(ResId[0]);
         }
         if (ResId[1] > 0) {
-            tabView.setIcon(ResId[1]);
+            tabView.setTextColor(ResId[1]);
         }
         if (ResId[2] > 0) {
-            tabView.setIcon(ResId[2]);
+            tabView.setTabgapColor(ResId[2]);
         }
         if (ResId[3] > 0) {
-            tabView.setIcon(ResId[3]);
+            tabView.setViewChooseColor(ResId[3]);
         }
+
+        tabView.setViewChooseVisible(isShow);
         
         if(index == 0)
         {
-        	tabView.settab_gapVisible(false);
+        	tabView.setTabgapVisible(false);
         }
        
         mTabLayout.addView(tabView, new LayoutParams(0, MATCH_PARENT, 1));
@@ -213,13 +215,15 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
                 title = EMPTY_TITLE;
             }
             int[] iconResId = new int[]{0,0,0,0};
+            boolean isShow=true;
             if (iconAdapter != null) {
                 iconResId[0] = iconAdapter.getIconResId(i);
                 iconResId[1] = iconAdapter.getTextColorId(i);
                 iconResId[2] = iconAdapter.getTabGapId(i);
                 iconResId[3] = iconAdapter.getViewChooseId(i);
+                isShow=iconAdapter.isShowChoose();
             }
-            addTab(i, title, iconResId);
+            addTab(i, title,isShow, iconResId);
         }
         if (mSelectedTabIndex > count) {
             mSelectedTabIndex = count - 1;
@@ -318,7 +322,7 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
             return mIndex;
         }
         
-        public void settab_gapVisible(boolean visible)
+        public void setTabgapVisible(boolean visible)
         {
         	if(visible)
         	{
@@ -348,6 +352,19 @@ public class IconTabPageIndicator extends LinearLayout implements PageIndicator 
             if(colorId>0) {
                 view_choose.setBackgroundResource(colorId);
             }
+        }
+
+        public void setViewChooseVisible(boolean visible)
+        {
+            if(visible)
+            {
+                view_choose.setVisibility(View.VISIBLE);
+            }
+            else
+            {
+                view_choose.setVisibility(View.INVISIBLE);
+            }
+
         }
     }
 }

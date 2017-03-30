@@ -55,6 +55,11 @@ public class HomeFragmentAdapter extends FragmentPagerAdapter implements IconPag
     }
 
     @Override
+    public boolean isShowChoose() {
+        return false;
+    }
+
+    @Override
     public int getCount() {
         return mFragments.size();
     }

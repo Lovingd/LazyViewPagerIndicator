@@ -9,6 +9,8 @@ public interface IconPagerAdapter {
     int getTabGapId(int index);
     int getViewChooseId(int index);
 
+    boolean isShowChoose();
+
     // From PagerAdapter
     int getCount();
 }
